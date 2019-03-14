@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		2F96AE9C223A9F35005B680E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F96AE9B223A9F35005B680E /* AppDelegate.swift */; };
-		2F96AE9E223A9F35005B680E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F96AE9D223A9F35005B680E /* ViewController.swift */; };
 		2F96AEA1223A9F35005B680E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F96AE9F223A9F35005B680E /* Main.storyboard */; };
 		2F96AEA3223A9F37005B680E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F96AEA2223A9F37005B680E /* Assets.xcassets */; };
 		2F96AEA6223A9F37005B680E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F96AEA4223A9F37005B680E /* LaunchScreen.storyboard */; };
+		2F96AEAE223A9FBC005B680E /* TasksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F96AEAD223A9FBC005B680E /* TasksController.swift */; };
+		2F96AEB0223AA678005B680E /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F96AEAF223AA678005B680E /* Task.swift */; };
+		2F96AEB2223AA6ED005B680E /* TaskStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F96AEB1223AA6ED005B680E /* TaskStore.swift */; };
+		2F96AEB6223ABA4A005B680E /* editControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F96AEB5223ABA4A005B680E /* editControllerViewController.swift */; };
+		2F96AEBC223AE1C2005B680E /* TasksUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F96AEBB223AE1C2005B680E /* TasksUtility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2F96AE98223A9F35005B680E /* GBCTodoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GBCTodoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F96AE9B223A9F35005B680E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2F96AE9D223A9F35005B680E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2F96AEA0223A9F35005B680E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2F96AEA2223A9F37005B680E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F96AEA5223A9F37005B680E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2F96AEA7223A9F37005B680E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F96AEAD223A9FBC005B680E /* TasksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksController.swift; sourceTree = "<group>"; };
+		2F96AEAF223AA678005B680E /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		2F96AEB1223AA6ED005B680E /* TaskStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskStore.swift; sourceTree = "<group>"; };
+		2F96AEB5223ABA4A005B680E /* editControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editControllerViewController.swift; sourceTree = "<group>"; };
+		2F96AEBB223AE1C2005B680E /* TasksUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksUtility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,50 @@
 		2F96AE9A223A9F35005B680E /* GBCTodoList */ = {
 			isa = PBXGroup;
 			children = (
-				2F96AE9B223A9F35005B680E /* AppDelegate.swift */,
-				2F96AE9D223A9F35005B680E /* ViewController.swift */,
 				2F96AE9F223A9F35005B680E /* Main.storyboard */,
-				2F96AEA2223A9F37005B680E /* Assets.xcassets */,
-				2F96AEA4223A9F37005B680E /* LaunchScreen.storyboard */,
-				2F96AEA7223A9F37005B680E /* Info.plist */,
+				2F96AEB7223AE0AC005B680E /* Models */,
+				2F96AEBA223AE0D3005B680E /* Controllers */,
+				2F96AEB9223AE0BC005B680E /* Helpers */,
+				2F96AEB8223AE0B4005B680E /* System */,
 			);
 			path = GBCTodoList;
+			sourceTree = "<group>";
+		};
+		2F96AEB7223AE0AC005B680E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2F96AEAF223AA678005B680E /* Task.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2F96AEB8223AE0B4005B680E /* System */ = {
+			isa = PBXGroup;
+			children = (
+				2F96AEA7223A9F37005B680E /* Info.plist */,
+				2F96AEA4223A9F37005B680E /* LaunchScreen.storyboard */,
+				2F96AE9B223A9F35005B680E /* AppDelegate.swift */,
+				2F96AEA2223A9F37005B680E /* Assets.xcassets */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		2F96AEB9223AE0BC005B680E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2F96AEB1223AA6ED005B680E /* TaskStore.swift */,
+				2F96AEBB223AE1C2005B680E /* TasksUtility.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		2F96AEBA223AE0D3005B680E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2F96AEAD223A9FBC005B680E /* TasksController.swift */,
+				2F96AEB5223ABA4A005B680E /* editControllerViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +179,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F96AE9E223A9F35005B680E /* ViewController.swift in Sources */,
+				2F96AEAE223A9FBC005B680E /* TasksController.swift in Sources */,
+				2F96AEB6223ABA4A005B680E /* editControllerViewController.swift in Sources */,
+				2F96AEB0223AA678005B680E /* Task.swift in Sources */,
+				2F96AEBC223AE1C2005B680E /* TasksUtility.swift in Sources */,
+				2F96AEB2223AA6ED005B680E /* TaskStore.swift in Sources */,
 				2F96AE9C223A9F35005B680E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,7 +329,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = GBCTodoList/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/GBCTodoList/System/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,7 +346,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = GBCTodoList/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/GBCTodoList/System/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

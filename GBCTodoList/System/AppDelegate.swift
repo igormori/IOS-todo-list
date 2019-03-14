@@ -8,14 +8,39 @@
 
 import UIKit
 
+extension UINavigationController{
+    
+    open override var preferredStatusBarStyle: UIStatusBarStyle{
+        
+        return  .lightContent
+    }
+    
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
 
+    // Initialize taskStore
+    let taskStore = TaskStore()
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+     
+        
+//        let todoTasks = [Task.init(name: "meditate",date:"April 16,19 12:00pm"),Task.init(name: "meditate1",date:"April 16,19 12:00pm"),Task.init(name: "meditate2",date:"April 16,19 12:00pm")]
+//        let doneTasks = [Task.init(name: "study",date:"April 16,19 12:00pm")]
+//
+//        taskStore.tasks = [todoTasks,doneTasks]
+        
+        //Grad the tasksController
+        let tasksController = window?.rootViewController?.childViewControllers.first as? TasksController
+        
+        //Set the taskStore accoordingly
+        tasksController?.taskStore = taskStore
         return true
     }
 
@@ -27,6 +52,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        
+        //save
+        TasksUtility.save(self.taskStore.tasks)
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
@@ -39,6 +67,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        
+        //save
+        TasksUtility.save(self.taskStore.tasks)
     }
 
 
